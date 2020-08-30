@@ -1,5 +1,7 @@
 
-$('.first-slider').slick({
+$('.first-slider .slides').slick({
+	dots: true,
+	appendDots: $('.first-slider .slider-nav'),
 	infinite: true, // цикличная карусель
 	slidesToShow: 1,
 	slidesToScroll: 1,

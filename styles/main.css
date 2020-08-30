@@ -99,34 +99,102 @@ body {
 	border: none;
 	margin-top: 50px;
 	cursor: pointer;
-	margin-bottom: 120px;
 }
 
 .button-prev,
-.button-next {
+.button-next,
+.button-back-clients,
+.button-forward-clients,
+.button-prev-reviews,
+.button-next-reviews {
 	width: 60px;
 	height: 60px;
 	color: #000;
 	font-size: 40px;
 	border: none;
 	cursor: pointer;
-	background: #FFF;
-	opacity: 0.2
+	background: rgba(0, 95, 163, 0.2);
+	padding: 0;
 }
 
-.button-prev {
-	margin-right: -3px;
+.button-prev,
+.button-back-clients,
+.button-prev-reviews {
+	margin-right: -4px;
 }
 
-.button-prev:active,
-.button-next:active {
-	opacity: 0.4;
+.button-prev:hover,
+.button-next:hover,
+.button-back-clients:hover,
+.button-forward-clients:hover,
+.button-prev-reviews:hover,
+.button-next-reviews:hover {
+	background: rgba(0, 95, 163);
 }
 
-.slider-nav {
-	position: absolute;
-	right: 0;
-	bottom: 0px;
+.button-prev:before,
+.button-next:before,
+.button-back-clients:before,
+.button-forward-clients:before,
+.button-prev-reviews:before,
+.button-next-reviews:before {
+	content: '';
+	display: block;
+	border: 1px solid #fff;
+	width: 10px;
+	height: 10px;
+	border-right: none;
+	border-bottom: none;
+	transform: rotate(-45deg);
+	margin: 0 26px;
+}
+
+.button-next:before,
+.button-forward-clients:before,
+.button-next-reviews:before {
+	transform: rotate(135deg);
+	margin: 0 20px;
+}
+
+.button-prev,
+.button-next {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.button-prev:hover,
+.button-next:hover {
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.first-slider .slider-nav {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.first-slider .slick-dots {
+	position: initial;
+	width: auto;
+}
+
+.first-slider .slick-dots li {
+	margin: 0 30px 0 0;
+}
+
+.first-slider .slick-dots li button:before {
+	content: '';
+	position: initial;
+	display: block;
+	background: #fff;
+	width: 10px;
+	height: 10px;
+	opacity: 0.2;
+	border-radius: 50%;
+}
+
+.first-slider .slick-dots li.slick-active button:before {
+	opacity: 1;
 }
 
 .services {
@@ -260,24 +328,8 @@ body {
 	justify-content: space-between;
 }
 
-.button-back-clients,
-.button-forward-clients {
-	background: #005FA3;
-	opacity: 0.2;
-	color: #fff;
-	border: none;
-	width: 60px;
-	height: 60px;
-	font-size: 40px;
-	cursor: pointer;
-}
-
-.button-back-clients {
-	margin-right: -4px;
-}
-
 .clients-item-slider {
-	margin-bottom: 40px;	
+	margin-bottom: 40px;
 }
 
 .review-1 {
@@ -315,21 +367,6 @@ body {
 	padding-bottom: 100px;
 }
 
-.button-prev-reviews,
-.button-next-reviews {
-	background: #005FA3;
-	opacity: 0.2;
-	color: #fff;
-	border: none;
-	width: 60px;
-	height: 60px;
-	font-size: 40px;
-	cursor: pointer;
-}
-
-.button-prev-reviews {
-	margin-right: -4px;
-}
 
 .footer {
 	background: url(../images/footer-screen.jpg);
